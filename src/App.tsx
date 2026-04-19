@@ -1,6 +1,6 @@
 import "./index.css";
 import logo from "./img/logo.png";
-import { useState } from "react";
+import { useState, type FormEvent, type ChangeEvent } from "react";
 
 export default function App() {
   const [value, setValue] = useState("");
@@ -8,16 +8,14 @@ export default function App() {
 
   // const thanks = useNavigate();
 
-  function submit(e) {
-    console.log("Event object:", event);
+  function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setResult("Thanks for Submitting!!");
 
     // thanks(`${Success}`)
   }
 
-  function handleChange(e) {
-    console.log("Event object handleChange:", e);
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
     setValue(e.target.value);
     setResult("");
   }
@@ -83,7 +81,7 @@ export default function App() {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 448 512"
               className="w-6 h-6"
               height="1em"
@@ -104,7 +102,7 @@ export default function App() {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 448 512"
               className="w-6 h-6"
               height="1em"
@@ -124,7 +122,7 @@ export default function App() {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 576 512"
               className="w-6 h-6"
               height="1em"
