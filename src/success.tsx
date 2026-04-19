@@ -1,29 +1,7 @@
 import "./index.css";
 import logo from "./img/logo.png";
-import { useState, useNavigate } from "react";
-import Success from "./success.tsx"
 
-export default function App() {
-  const [value, setValue] = useState("");
-  const [result, setResult] = useState("");
-
-  // const thanks = useNavigate();
-
-  function submit(e) {
-    console.log("Event object:", event);
-    e.preventDefault();
-    setResult('Thanks for Submitting!!');
-
-    // thanks(`${Success}`)
-}
-
-  function handleChange(e) {
-    console.log("Event object handleChange:", e);
-    setValue(e.target.value);
-    setResult('');
-
-  }
-
+export default function Success() {
   return (
     <div className="min-h-[100dvh] w-full bg-white flex flex-col items-center justify-between">
       <main className="flex-1 flex flex-col items-center justify-center w-full max-w-xl px-6 py-16 mx-auto text-center gap-12">
@@ -35,33 +13,10 @@ export default function App() {
           />
         </div>
         <div className="">
-          <h2 className="text-4xl font-bold "> Join The Team</h2>
-          <p className="text-sm mt-4">
-            {" "}
-            Stay up to date on when my new website launch, get exclusive music,
-            stage play dates, TV appearances, and much more.
-          </p>
+          <h2 className="text-4xl font-bold "> Thanks For Submitting!</h2>
+          
         </div>
-        <div className="opacity: 1; transform: none; w-full max-w-sm mx-auto">
-          <form className="flex flex-col gap-3"  data-netlify-honeypot="bot-fly" name="subscribe" method="POST" data-netlify="true" onSubmit={submit}>
-            <input name="bot-fly"  className={"display: none"}/>
-            <div className="space-y-2 relative">
-              <input
-                type="email"
-                value={value}
-                onChange={handleChange}
-                className="flex py-1 shadow-sm file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm w-full h-12 px-5 rounded-full border border-black/20 bg-white text-black placeholder:text-black/40 text-sm focus-visible:ring-1 focus-visible:ring-red-600 focus-visible:border-red-600 transition-all duration-200"
-                placeholder="Enter your email"
-              />
-              <div className="space-y-2 relative"></div>
-            </div>
-            <button type="submit" className="inline-flex items-center justify-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover-elevate active-elevate-2 border border-primary-border min-h-9 px-4 py-2 h-12 rounded-full bg-black text-white font-medium tracking-wider text-sm hover:bg-red-600 transition-colors duration-300 mt-1">
-              Join the List
-            </button>
-            <h2 className="text-4xl font-bold "> {result}</h2>
-
-          </form>
-        </div>
+       
       </main>
       <footer className="w-full py-10 flex justify-center items-center">
         <div className="flex items-center gap-8">
