@@ -46,6 +46,7 @@ export default function App() {
             method="POST"
             data-netlify="true"
             onSubmit={submit}
+            netlify
           >
             <input name="bot-fly" className={"display: none"} />
             <div className="space-y-2 relative">
