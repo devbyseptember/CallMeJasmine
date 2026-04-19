@@ -1,7 +1,6 @@
 import "./index.css";
 import logo from "./img/logo.png";
-import { useState, useNavigate } from "react";
-import Success from "./success.tsx"
+import { useState } from "react";
 
 export default function App() {
   const [value, setValue] = useState("");
@@ -12,16 +11,15 @@ export default function App() {
   function submit(e) {
     console.log("Event object:", event);
     e.preventDefault();
-    setResult('Thanks for Submitting!!');
+    setResult("Thanks for Submitting!!");
 
     // thanks(`${Success}`)
-}
+  }
 
   function handleChange(e) {
     console.log("Event object handleChange:", e);
     setValue(e.target.value);
-    setResult('');
-
+    setResult("");
   }
 
   return (
@@ -43,8 +41,15 @@ export default function App() {
           </p>
         </div>
         <div className="opacity: 1; transform: none; w-full max-w-sm mx-auto">
-          <form className="flex flex-col gap-3"  data-netlify-honeypot="bot-fly" name="subscribe" method="POST" data-netlify="true" onSubmit={submit}>
-            <input name="bot-fly"  className={"display: none"}/>
+          <form
+            className="flex flex-col gap-3"
+            data-netlify-honeypot="bot-fly"
+            name="subscribe"
+            method="POST"
+            data-netlify="true"
+            onSubmit={submit}
+          >
+            <input name="bot-fly" className={"display: none"} />
             <div className="space-y-2 relative">
               <input
                 type="email"
@@ -55,11 +60,13 @@ export default function App() {
               />
               <div className="space-y-2 relative"></div>
             </div>
-            <button type="submit" className="inline-flex items-center justify-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover-elevate active-elevate-2 border border-primary-border min-h-9 px-4 py-2 h-12 rounded-full bg-black text-white font-medium tracking-wider text-sm hover:bg-red-600 transition-colors duration-300 mt-1">
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover-elevate active-elevate-2 border border-primary-border min-h-9 px-4 py-2 h-12 rounded-full bg-black text-white font-medium tracking-wider text-sm hover:bg-red-600 transition-colors duration-300 mt-1"
+            >
               Join the List
             </button>
             <h2 className="text-4xl font-bold "> {result}</h2>
-
           </form>
         </div>
       </main>
@@ -77,7 +84,7 @@ export default function App() {
               fill="currentColor"
               stroke-width="0"
               viewBox="0 0 448 512"
-              class="w-6 h-6"
+              className="w-6 h-6"
               height="1em"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +105,7 @@ export default function App() {
               fill="currentColor"
               stroke-width="0"
               viewBox="0 0 448 512"
-              class="w-6 h-6"
+              className="w-6 h-6"
               height="1em"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +125,7 @@ export default function App() {
               fill="currentColor"
               stroke-width="0"
               viewBox="0 0 576 512"
-              class="w-6 h-6"
+              className="w-6 h-6"
               height="1em"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
